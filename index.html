@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Wisely - Online Safety</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e3f2fd;
+        }
+        header {
+            background-color: #220773;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color:#F98C2D;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #110902;
+        }
+        section {
+            display: none;
+            padding: 20px;
+           
+        }
+        section.active {
+            display: inline-block;
+            
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #060526e9;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #bbdefb;
+        }
+        textarea {
+            width: 100%;
+            max-width: 100%;
+            padding: 10px;
+            font-size: 1em;
+        }
+        button {
+            background-color: #1e88e5;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1em;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #1565c0;
+        }
+        footer {
+            
+            padding: 0.1px;
+            background-color: #000000;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll("section");
+            sections.forEach(section => section.classList.remove("active"));
+            document.getElementById(sectionId).classList.add("active");
+        }
+
+        function saveExperience() {
+            const experienceInput = document.getElementById("experience");
+            const experience = experienceInput.value.trim();
+
+            if (!experience) {
+                alert("Please write something before submitting!");
+                return;
+            }
+
+            const now = new Date();
+            const formattedDate = `${now.toLocaleDateString()} ${now.toLocaleTimeString()}`;
+
+            const table = document.getElementById("experienceTable");
+            const newRow = table.insertRow();
+
+            const cell1 = newRow.insertCell(0);
+            const cell2 = newRow.insertCell(1);
+            const cell3 = newRow.insertCell(2);
+
+            cell1.textContent = "Anonymous";
+            cell2.textContent = experience;
+            cell3.textContent = formattedDate;
+
+            experienceInput.value = ""; // Clear the text area
+            alert("Your experience has been saved!");
+            showSection("read_experience");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Click Wisely - Online Safety</h1>
+    </header>
+    <nav>
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('social_media_safety')">Social Media Safety</a>
+        <a href="#" onclick="showSection('online_scams')">Online Scams</a>
+        <a href="#" onclick="showSection('advantages_disadvantages')">Advantages & Disadvantages</a>
+        <a href="#" onclick="showSection('tips_online_safety')">Tips for Online Safety</a>
+        <a href="#" onclick="showSection('cyber_attacks')">Cyber Attacks</a>
+        <a href="#" onclick="showSection('mindful_usage')">Mindful Usage</a>
+        
+    </nav>
+
+    <section id="home" class="active">
+        <h2><center>Welcome to Click Wisely</center></h2>
+        <p><center>"Your guide to navigating the online world wisely"<center>     
+Explore our sections to learn about online safety and share your experiences.
+In today's world, online safety is more important than ever. Click Wisely encourages individuals to think before acting, understanding the potential consequences of their online actions. It’s about exercising caution, practicing good judgment, and making choices that contribute to a safer, more respectful digital space. The term underscores the importance of being aware of the risks in the online world—whether it’s identity theft, privacy violations, scams, or exposure to inappropriate content—and taking steps to avoid them.
+
+The essence of “Click Wisely” is also about empowering people with knowledge. It’s not just about avoiding danger; it’s about being proactive, staying informed, and teaching others to do the same. By understanding how the internet works, recognizing threats, and knowing how to protect personal information, individuals can navigate the digital world with confidence and security. The phrase serves as a call to action, urging people to make online decisions based on awareness, respect, and responsibility.
+
+Furthermore, Click Wisely promotes a sense of responsibility in the digital community. The internet is a shared space, and the way we interact online affects others. By clicking wisely, we contribute to a safer, more compassionate digital world where users can connect, share, and explore without fear or harm.
+
+In summary, Click Wisely isn’t just a term—it’s a mindset and a movement toward better online habits. It’s about taking control of our digital lives, educating ourselves and others, and ensuring that our online actions reflect the values of safety, respect, and accountability.<br>
+       <center>******......Because online safety is not a choice, it’s a priority......******<center> </p>
+    </section>
+
+    <section id="social_media_safety">
+        <h2><center>Social Media Safety<center></h2>
+        <p>Social media platforms are a great way to connect with others, but they come with their own set of risks.
+Avoid Sharing Location Details
+Refrain from posting your real-time location, especially public check-ins,
+as it may compromise your privacy and safety.
+
+Verify Friend Requests
+Be cautious when accepting friend or follow requests.
+Scammers often create fake profiles to gain access to personal information.
+
+Be Mindful of What You Post
+Think twice before posting. Once something is online, it can be difficult
+to fully remove, even if you delete it later.
+
+Beware of Clickbait and Malicious Links
+Avoid clicking on suspicious links or ads that seem too good to be true,
+as they might lead to phishing websites or malware downloads.
+
+Regularly Monitor Account Activity
+Frequently check your account for unfamiliar logins or suspicious activity.
+Report and secure your account immediately if you notice anything unusual. Here are some tips to stay safe:</p>
+        <table>
+            <tr><th>Tip</th><th>Description</th></tr>
+            <tr><td>Limit Sharing Personal Information</td><td>Do not share sensitive personal information like your address, phone number, or financial details.</td></tr>
+            <tr><td>Privacy Settings</td><td>Adjust your privacy settings so only trusted friends can see your posts.</td></tr>
+            <tr><td>Beware of Strangers</td><td>Avoid interacting with people you don’t know. If you do, be cautious about the information you share.</td></tr>
+        </table>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/vPlWDFtP0T0" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section id="online_scams">
+        <h2><center>Online Scams<center></h2>
+        <p>Online scams can take many forms, from fraudulent emails to fake websites.<br>
+Romance Scams.....<br>
+
+Scammers may pose as potential romantic partners on dating websites or apps to gain your trust and eventually ask for money. Always verify their authenticity before engaging deeply.<br>
+Job Offer Scams.....<br>
+
+Be wary of unsolicited job offers promising high salaries with minimal effort. Scammers often request upfront payments for training or equipment.<br>
+Lottery or Prize Scams.....<br>
+
+You may receive messages claiming you’ve won a lottery or prize, but they require you to pay fees or share personal details. Genuine lotteries don’t ask for money upfront.<br>
+Overpayment Scams.....<br>
+
+Scammers might "overpay" for a product or service and request a refund of the excess. These payments are often fake, leaving you at a loss.<br>
+Investment Scams.....<br>
+
+Fraudsters offer fake investment opportunities with guaranteed high returns. Always research and verify the legitimacy of investment platforms. Stay alert to avoid falling victim:</p>
+        <table>
+            <tr><th>Scam Type</th><th>Description</th><th>How to Avoid</th></tr>
+            <tr><td>Phishing Emails</td><td>Fake emails that attempt to steal your personal details.</td><td>Never click on suspicious links and always verify the sender.</td></tr>
+            <tr><td>Fake Online Stores</td><td>Websites that offer products at unbelievably low prices to scam you.</td><td>Check reviews and ensure the site is secure (look for "https").</td></tr>
+            <tr><td>Tech Support Scams</td><td>Scammers pretending to be from tech support and asking for remote access to your device.</td><td>Never give remote access to strangers and contact official support for help.</td></tr>
+        </table>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/k8UVnkh8i0c" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section id="advantages_disadvantages">
+        <h2><center>Advantages & Disadvantages<center></h2>
+        <p>Every technology has its pros and cons. On the positive side, it provides accessibility to information and resources globally, enhances efficiency by automating tasks, and fosters connectivity through seamless communication. Technology also revolutionizes education by making it accessible to all and drives innovation in fields like healthcare and transportation. However, it comes with challenges such as privacy risks, where personal data can be misused, and digital addiction, which affects mental and physical health. Job displacement due to automation poses a threat to workers, while cyber threats like hacking and phishing increase vulnerability. Additionally, excessive use contributes to environmental issues like e-waste and energy consumption. Balancing its benefits and drawbacks is essential to ensure technology serves humanity responsibly. Here’s a breakdown:</p>
+        <table>
+            <tr><th>Advantage</th><th>Description</th></tr>
+            <tr><td>Accessibility</td><td>The internet provides access to information and services from anywhere in the world.</td></tr>
+            <tr><td>Communication</td><td>Social media and messaging apps allow us to stay connected with loved ones.</td></tr>
+            <tr><td>Online Education</td><td>Online learning platforms make education accessible to people everywhere.</td></tr>
+        </table>
+        <table>
+            <tr><th>Disadvantage</th><th>Description</th></tr>
+            <tr><td>Privacy Risks</td><td>Personal data can be stolen or misused by hackers.</td></tr>
+            <tr><td>Cyberbullying</td><td>The internet has become a platform for bullying and harassment.</td></tr>
+            <tr><td>Time Wastage</td><td>Excessive time on social media and other websites can reduce productivity and impact mental health.</td></tr>
+        </table>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/xtQfV6COHbU" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section id="tips_online_safety">
+        <h2><center>Tips for Online Safety<center></h2>
+        <p>To stay safe online, it is essential to follow key practices that protect your privacy and security. Start by using strong, complex passwords and enabling two-factor authentication for an extra layer of protection. Avoid clicking on suspicious links, as they can lead to phishing sites or malware. Regularly update your software to fix vulnerabilities and ensure your Wi-Fi network is secured with a strong password. Be cautious about sharing personal information online and always verify that websites are secure (look for "https" and a padlock symbol) before entering sensitive data. Adjust privacy settings on social media and apps to control what others can see. Educate yourself and your family about online threats to build awareness, and back up important data regularly to safeguard it in case of cyberattacks or device issues. By following these steps, you can navigate the digital world confidently and safely.<br>
+Follow these practical tips to stay safe online:</p>
+        <table>
+            <tr><th>Tip</th><th>Description</th></tr>
+            <tr><td>Use Strong Passwords</td><td>Create passwords that are hard to guess by mixing letters, numbers, and symbols.</td></tr>
+            <tr><td>Enable Two-Factor Authentication</td><td>Always use two-factor authentication wherever possible to add an extra layer of security.</td></tr>
+            <tr><td>Use Secure Websites</td><td>Look for "https" and a padlock symbol in the URL bar to ensure a website is secure.</td></tr>
+            <tr><td>Regularly Update Software</td><td>Keep your devices updated to protect them from vulnerabilities.</td></tr>
+        </table>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/aO858HyFbKI" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section id="cyber_attacks">
+        <h2><center>Cyber Attacks<center></h2>
+        <p>Cyber attacks are attempts to harm or break into systems, networks, or devices without permission. Common examples include phishing, where attackers trick people into sharing personal information, and ransomware, which locks your data until you pay money. Another example is a denial-of-service (DoS) attack, which floods a website with too much traffic so it stops working. To protect yourself, use strong passwords, turn on two-step verification, and keep your software updated. Avoid clicking on unknown links or emails, and always back up your important files. Being careful and staying informed can help keep you safe.
+Cyber attacks come in various forms. Understanding the types can help you stay protected:</p>
+        <table>
+            <tr><th>Attack Type</th><th>Description</th><th>Prevention</th></tr>
+            <tr><td>Phishing</td><td>Attempts to steal personal information by pretending to be a trustworthy source.</td><td>Be cautious with emails and links from unknown sources.</td></tr>
+            <tr><td>Ransomware</td><td>Malware that locks your data and demands a ransom to unlock it.</td><td>Backup data and avoid clicking on suspicious links.</td></tr>
+            <tr><td>Denial of Service (DoS)</td><td>An attack that floods a server with traffic, making it unavailable.</td><td>Use firewalls and intrusion detection systems to prevent attacks.</td></tr>
+        </table>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Dk-ZqQ-bfy4" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section id="mindful_usage">
+        <h2><center>Mindful Usage<center></h2>
+        <p>Mindful technology usage involves being aware of how much time you spend on digital devices and how it affects your well-being. It’s important to set limits on screen time to avoid overuse and reduce the negative impact on your health. Taking regular breaks from screens helps prevent digital fatigue and gives your mind a chance to rest. Focus on meaningful online activities that enrich your life, instead of mindlessly scrolling. Being mindful also means being aware of the potential for digital addiction and making time for offline activities that help you stay balanced. By practicing mindful usage, you can maintain a healthy relationship with technology.Mindful technology usage helps maintain a healthy balance with digital devices:</p>
+        <table>
+            <tr><th>Tip</th><th>Description</th></tr>
+            <tr><td>Limit Screen Time</td><td>Set daily limits to reduce excessive screen time.</td></tr>
+            <tr><td>Take Breaks</td><td>Take regular breaks to avoid digital fatigue.</td></tr>
+            <tr><td>Focus on Quality</td><td>Engage in meaningful online activities rather than mindless scrolling.</td></tr>
+            <tr><td>Avoid Digital Addiction</td><td>Be aware of time spent online and its impact on your well-being.</td></tr>
+        </table>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/7brFKEimsHQ" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+  
+
+    <footer>
+        <p style="float: left; margin-left: 1cm;">&copy; 2024 Click Wisely | Promoting safe online practices.</p>
+        <p style="float: right; margin-right: 1cm;"><a href="https://www.instagram.com/click.wisely/profilecard/?igsh=MWt4MXBwbmJlMnJiYg==" style="text-decoration: none; color: inherit;"> @click.wisely insta page for daily updates.</a></p>
+    </footer>
+</body>
+        </html>
